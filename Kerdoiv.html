@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kérdőív</title>
+  <link rel="stylesheet" href="pilotak_style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="driver_kepek/fooldal_ikon.png" type="image/x-icon">
+  <meta name="author" content="Tóth Bálint">
+
+  <script src="jquery-3.7.1.js"></script>
+  <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        $("#login").validate({
+            rules: {
+                    username: "required",
+                    email: {
+                        required: true,
+                        email: true},
+
+                    pw:{
+                        required: true,
+                        minlength: 8,
+                    },
+                    
+                    mentes:{
+                        required: false,
+                    },
+                
+                },
+            messages:{
+                    username: "Írj be egy felhasználónevet!",
+                    email: "Írj be egy valós email címet!",
+                    pw:{
+                        required: "Adj meg egy jelszót",
+                        minlength: "A jelszavad legalább 8 karakter hosszú legyen!",
+                    },
+
+                    
+            }
+        })});
+            
+    </script>
+
+    <script>
+        $(document).ready(function(){
+        $("#kerdoiv").validate({
+            rules: {
+                    radio: "required",
+                    month: "required",
+
+                },
+            messages:{
+                month: "Kérjük töltse ki!"
+                    
+
+                    
+            }
+        })});
+    </script>
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <h1>Kérdőív a Forma-1-el kapcsolatban</h1>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="fooldal.html">Főoldal</a></li>
+            <li><a href="Csapatok.html">Csapatok</a></li>
+            <li><a href="pilotak.html">Pilóták</a></li>
+            <li><a class="active" href="#">Kérdőív</a></li>
+        </ul>
+    </nav>
+
+
+    <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="login" novalidate>
+        <h2>Regisztráció a válaszok megtekintéséhez</h2>
+
+        <label for="username">Felhasználónév: 
+            <input type="text" name="username" id="username">
+
+        </label>
+        <br>
+
+
+        <label for="pw">Jelszó
+            <input type="password" name="pw" id="pw">
+        </label>
+        <br>
+
+
+        <label for="email">E-mail:
+            <input type="email" name="email" id="email">
+        </label>
+        <br>
+
+        <label for="mentes">
+            <input type="checkbox" name="mentes" id="mentes">
+            Regisztrációs adatok mentése
+        </label>
+    
+        <label for="re">
+            <input type="reset" value="Eredeti visszaállítása" name="re" id="re">
+        </label>
+        <br>
+
+        <label for="send">
+            <input type="submit" value="Elküldés" name="send" id="send">
+        </label>
+    </form>
+
+
+    <form id="kerdoiv">
+        Ki NEM a Redbull csapat tagja?
+        <br>
+        <label>
+            <input type="radio" name="rb"> Max Verstappen
+        </label>
+        
+
+        <label>
+            <input type="radio" name="rb"> Sergio Perez
+        </label>
+
+        <label>
+            <input type="radio" name="rb" id="ham"> Lewis Hamilton
+        </label>
+
+        <label>2021-as szezon konstruktőri győztese:
+            <select>
+                <option>Red Bull Racing</option>
+                <option>Mercedes-AMG PETRONAS F1 Team</option>
+                <option>Aston Martin Aramco Cognizant F1 Team</option>
+                <option>Scuderia Ferrari</option>
+                <option>McLaren Formula 1 Team</option>
+                <option>BWT Alpine F1 Team</option>
+                <option>Williams Racing</option>
+                <option>Scuderia AlphaTauri</option>
+                <option>Alfa Romeo F1 Team Stake</option>
+                <option>MoneyGram Haas F1 Team</option>
+            </select>
+        </label>
+
+        <label>Mikor tört meg Lewis Hamilton
+            <input type="month">
+
+        </label>
+
+        <label>
+            <input type="reset" value="Eredeti visszaállítása">
+        </label>
+        <br>
+
+        <label>
+            <input type="submit" value="Elküldés" id="elkuldes">
+        </label>
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+        <br>
+  <footer>
+    <p>Az oldalon felhasznált elemek a Formula One Group tulajdona, az oldal készítője semmilyen tulajdoni joggal nem rendelkezik felettük. Az oldalt készítette: Tóth Bálint</p>
+  </footer>
+
+</body>
+</html>
