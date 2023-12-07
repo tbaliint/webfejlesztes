@@ -2,7 +2,7 @@
 
 Oldal készítője: Tóth Bálint
 
-URL cím:
+URL cím: https://xalatath312.github.io/webfejlesztes/
 
 A weboldal a Forma-1-ről szól rajongói megközelítéssel, elsősorban a fontos alapokra, egy izgalmasabb versenyre és a pilótákra fókuszál.
 
